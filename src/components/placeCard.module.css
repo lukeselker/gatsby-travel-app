@@ -1,0 +1,50 @@
+.cardStyles {
+    width: 18rem; 
+    margin-top: 2em;
+}
+
+.monthContainer {
+    background-color:lightgrey; 
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px; 
+    display:inline-block;
+    transform: translate(15px, -10px);
+    z-index: 1;
+}
+
+.month {
+    background-color:lightgrey; 
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'Josefin Slab', serif ;
+    position: absolute;
+    right:0px;
+    white-space: nowrap;
+    border-radius: 0.25rem !important;
+}
+
+.cardName {
+    font-family: 'Pacifico', cursive;
+    letter-spacing: -.025em;
+    font-size: 30px; 
+    font-weight: normal;
+    color:white;
+}
+
+.cardSubname {
+    font-family: 'Roboto';
+    color: white
+}
+
+.imgShading::after{
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    content: '';
+    background-size: cover;
+}

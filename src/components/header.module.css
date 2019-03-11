@@ -1,0 +1,36 @@
+.navbar {
+   background-color: #f2f2f2;
+   border-bottom-style: solid;
+   border-bottom-width:1px;
+   border-bottom-color:rgb(238,238,238);
+}
+
+.brand {
+  color: #444;
+  white-space: nowrap;
+  font-family: 'Pacifico', cursive;
+  letter-spacing: -.05em; 
+  font-weight: normal;
+}
+
+.navLink {
+    font-family: 'Oswald';
+    padding: 15px 20px !important;
+    font-size: 12px;
+    font-weight: 800;
+    color:gray;
+    text-align:center ; 
+}
+
+.navIconContainer {
+    width:100%; 
+    display:flex; 
+    align-content: stretch;
+    justify-content: center;
+}
+.navIcon {
+    margin: 0px 10px 0px 10px; 
+    transform: translateY(-2px);
+    text-align: center;
+    font-size: 1.3em;
+}
