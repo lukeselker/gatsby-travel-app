@@ -1,0 +1,15 @@
+.img {
+    object-fit:cover;
+    cursor:pointer;
+    width:150px;
+    height:150px;
+}
+
+.rollover {
+    display:inline-block;
+    position:relative;
+    margin:15px;
+    width:150px;
+    height:150px;
+    font-family: 'Roboto', sans-serif;
+}

@@ -6,6 +6,7 @@ import { graphql } from "gatsby";
 import SEO from "../components/seo"
 import PlaceCard from "../components/placeCard"
 import { Container, Row, Col, CardDeck } from 'react-bootstrap';
+import Instafeed from '../components/instagram';
 
 const IndexPage = (props) => (
   <Layout>
@@ -108,11 +109,19 @@ const IndexPage = (props) => (
                   name={'French Polynesia'}
                 />
               </CardDeck>
-            </div>
-
+            </div>           
             </Row>
           </Col>
         </Row>
+        <hr />
+        <div style={{ textAlign: 'center' }}>
+          <h5 style={{ fontWeight: 800 }}>Follow us on Instagram
+            <a style={{color: '#333'}} href="https://www.instagram.com/SomewhereWithTheSelkers/"> @SomewhereWithTheSelkers</a>
+          </h5>
+        </div>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+        <Instafeed />
+        </div>
       </Container>
   </Layout>
 )
