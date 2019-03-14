@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import PlaceCard from "../components/placeCard"
 import { Container, Row, Col, CardDeck } from 'react-bootstrap';
 import Instafeed from '../components/instagram';
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 const IndexPage = (props) => (
   <Layout>
@@ -115,12 +116,19 @@ const IndexPage = (props) => (
         </Row>
         <hr />
         <div style={{ textAlign: 'center' }}>
-          <h5 style={{ fontWeight: 800 }}>Follow us on Instagram
-            <a style={{color: '#333'}} href="https://www.instagram.com/SomewhereWithTheSelkers/"> @SomewhereWithTheSelkers</a>
+          <h5 style={{ fontSize: '21px', fontWeight: 300 }}>Instagrams <span style={{fontSize: '10px'}}>by</span>
+            <a style={{fontSize: '10px'}} href="https://www.instagram.com/SomewhereWithTheSelkers/"> @SomewhereWithTheSelkers</a>
           </h5>
         </div>
-        <div style={{display: 'flex', justifyContent: 'center'}}>
+        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
         <Instafeed />
+        </div>
+        <hr />
+        <div style={{textAlign: 'center'}}>
+        <TwitterTimelineEmbed 
+          sourceType="profile"
+          screenName="withtheselkers"
+          options={{height: 400, width: 300}}/>
         </div>
       </Container>
   </Layout>
