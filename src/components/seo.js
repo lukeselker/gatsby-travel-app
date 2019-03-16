@@ -1,9 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
+import small_bridge from '../images/small_bridge.png';
 import { StaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, img }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -16,7 +17,6 @@ function SEO({ description, lang, meta, keywords, title }) {
               lang,
             }}
             title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
                 name: `description`,
@@ -32,7 +32,11 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:type`,
-                content: `website`,
+                content: `article`,
+              },
+              {
+                property: `og:image`,
+                content: img,
               },
               {
                 name: `twitter:card`,
@@ -60,6 +64,11 @@ function SEO({ description, lang, meta, keywords, title }) {
                   : []
               )
               .concat(meta)}
+              link={[
+                { rel: 'icon', type: 'image/png', sizes: "16x16", href: `${small_bridge}` },
+                { rel: 'icon', type: 'image/png', sizes: "32x32", href: `${small_bridge}` },
+                { rel: 'shortcut icon', type: 'image/png', href: `${small_bridge}` },
+            ]}
           />
         )
       }}

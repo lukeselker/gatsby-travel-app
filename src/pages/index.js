@@ -11,7 +11,7 @@ import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 const IndexPage = (props) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Somewhere With The Selkers •  Find Your Next Somewhere" keywords={[`gatsby`, `application`, `react`]} />
     <Container>
       <Row className="justify-content-center">
         <Col lg={8} md={10} xs={6} className='mx-auto'>
