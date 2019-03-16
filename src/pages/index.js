@@ -115,21 +115,31 @@ const IndexPage = (props) => (
           </Col>
         </Row>
         <hr />
-        <div style={{ textAlign: 'center' }}>
-          <h5 style={{ fontSize: '21px', fontWeight: 300 }}>Instagrams <span style={{fontSize: '10px'}}>by</span>
-            <a style={{fontSize: '10px'}} href="https://www.instagram.com/SomewhereWithTheSelkers/"> @SomewhereWithTheSelkers</a>
+
+        
+        
+        
+      <Row>
+      <Col>
+      <div style={{ textAlign: 'center',marginRight: '20px', marginTop: '12px' }}>
+          <h5 style={{ fontSize: '21px', fontWeight: 300 }}>Instagrams <span style={{fontSize: '12px', fontWeight: '400', color: '#657786'}}>by</span>
+            <a style={{fontWeight: '400',color: '#2b7bb9', fontSize: '12px', textDecoration: 'none'}} href="https://www.instagram.com/SomewhereWithTheSelkers/"> @SomewhereWithTheSelkers</a>
           </h5>
-        </div>
-        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
+      </div>
+      <div style={{textAlign: 'center'}}>
+        <hr style={{width: '330px', margin: '0 auto'}} />
         <Instafeed />
         </div>
-        <hr />
-        <div style={{textAlign: 'center'}}>
-        <TwitterTimelineEmbed 
-          sourceType="profile"
-          screenName="withtheselkers"
-          options={{height: 400, width: 300}}/>
+        </Col>
+      <Col>
+      <div style={{textAlign: 'center'}}>
+          <TwitterTimelineEmbed
+            sourceType="profile"
+            screenName="withtheselkers"
+            options={{ height: 450, width: 300 }} />
         </div>
+        </Col>
+        </Row>
       </Container>
   </Layout>
 )

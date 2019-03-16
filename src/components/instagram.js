@@ -27,7 +27,6 @@ class Instafeed extends React.Component {
 
   render() {
     const { pics } = this.state;
-    console.log(pics);
     return (
       pics.map(p => {
         return <a href={p.link} src>
