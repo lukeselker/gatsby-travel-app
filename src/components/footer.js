@@ -26,7 +26,7 @@ const Footer = () => (
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted" style={{marginTop: '30px'}}>Copyright &copy; SomewhereWithTheSelkers 2017</p>
+                    <p className={"copyright text-muted"} style={{marginTop: '30px'}}>Copyright &copy; SomewhereWithTheSelkers 2017</p>
                 </div>
             </Row>
         </Container>
