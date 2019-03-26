@@ -10,7 +10,7 @@ import NewMap from '../components/newMap';
 const TahitiPost = (props) => (
   
    <div>
-	<header className={"masthead"} style={{marginTop: '55px', backgroundImage: `url(${tahiti})`, position: 'absolute', zIndex: '-1', width: '100%'}}>
+	<header className={"masthead"} style={{height: '539px', marginTop: '55px', backgroundImage: `url(${tahiti})`, position: 'absolute', zIndex: '-1', width: '100%'}}>
        <div className={"container"}>
 	 			<div className={"row"}>
 	 				<div className={"col-lg-8 col-md-10 mx-auto"}>
@@ -31,7 +31,7 @@ const TahitiPost = (props) => (
     />
     <article className={'postWrapper'}>
 			<div className={"container"}>
-			<div className={"row mx-auto"} style={{ width: '100%'}}><NewMap /></div>
+			<div className={"row mx-auto"} ><NewMap /></div>
 
 				<div className={"row"}>
 

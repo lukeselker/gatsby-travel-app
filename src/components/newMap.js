@@ -23,6 +23,7 @@ chart.maxZoomLevel = 1;
 chart.geodata = am4geodata_worldLow;
 chart.projection = new am4maps.projections.Miller();
 chart.homeZoomLevel = 2.5;
+chart.responsive.enabled = true;
 
 
 // Create map polygon series
@@ -195,7 +196,7 @@ flyPlane();
   
     render() {
       return (
-        <div id="chartdiv" style={{ margin: '50px 0px', width: "100%", height: "400px" }}></div>
+        <div id="chartdiv" style={{ margin: '25px 0px', width: "100%", height: 'calc(30vw)' }}></div>
       );
     }
   }
