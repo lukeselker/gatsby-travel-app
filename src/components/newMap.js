@@ -19,11 +19,14 @@ am4core.useTheme(am4themes_animated);
 let chart = am4core.create("chartdiv", am4maps.MapChart);
 chart.seriesContainer.draggable = false;
 chart.seriesContainer.resizable = false;
-chart.maxZoomLevel = 1;
+chart.panEventsEnabled = false;
+chart.maxZoomLevel = this.props.zoomLevel;
+chart.minZoomLevel = this.props.zoomLevel;
 chart.geodata = am4geodata_worldLow;
 chart.projection = new am4maps.projections.Miller();
-chart.homeZoomLevel = 2.5;
+chart.homeZoomLevel = this.props.zoomLevel;
 chart.responsive.enabled = true;
+chart.homeGeoPoint = this.props.homeGeoPoint;
 
 
 // Create map polygon series
@@ -49,10 +52,13 @@ function addCity(coords, title) {
     city.longitude = coords.longitude;
     city.tooltipText = title;
     return city;
-}
+}   
 
-let sf = addCity({ "latitude": 37.7749, "longitude": -122.4194 }, "San Francisco");
-let papeete = addCity({ "latitude": 17.5516, "longitude": 149.5585 }, "Papeete")
+
+let city1 = addCity({ "latitude": this.props.cityList[0].latitude, "longitude": this.props.cityList[0].longitude }, this.props.cityList[0].name);
+let city2 = addCity({ "latitude": this.props.cityList[1].latitude, "longitude": this.props.cityList[1].longitude }, this.props.cityList[1].name);
+
+
 
 // Add lines
 let lineSeries = chart.series.push(new am4maps.MapArcSeries());
@@ -81,7 +87,7 @@ function addLine(from, to) {
 }
 
 
-addLine(sf, papeete);
+addLine(city1, city2);
 
 // Add plane
 let plane = lineSeries.mapLines.getIndex(0).lineObjects.create();
@@ -94,7 +100,7 @@ plane.adapter.add("scale", (scale, target) => {
 })
 
 let planeImage = plane.createChild(am4core.Sprite);
-planeImage.scale = .2;
+planeImage.scale = this.props.planeScale;
 planeImage.horizontalCenter = "middle";
 planeImage.verticalCenter = "middle";
 planeImage.path = "m2,106h28l24,30h72l-44,-133h35l80,132h98c21,0 21,34 0,34l-98,0 -80,134h-35l43,-133h-71l-24,30h-28l15,-47";
@@ -107,7 +113,7 @@ shadowPlane.width = 48;
 shadowPlane.height = 48;
 
 let shadowPlaneImage = shadowPlane.createChild(am4core.Sprite);
-shadowPlaneImage.scale = 0.05;
+shadowPlaneImage.scale = this.props.planeScale/4;
 shadowPlaneImage.horizontalCenter = "middle";
 shadowPlaneImage.verticalCenter = "middle";
 shadowPlaneImage.path = "m2,106h28l24,30h72l-44,-133h35l80,132h98c21,0 21,34 0,34l-98,0 -80,134h-35l43,-133h-71l-24,30h-28l15,-47";

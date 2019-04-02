@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => (
   <div className={headerStyles.navbar}>
   <Container >
   <Navbar collapseOnSelect expand="lg">
-  <Navbar.Brand className={headerStyles.brand} href="#home">Somewhere With The Selkers</Navbar.Brand>
+  <Navbar.Brand className={headerStyles.brand} href="/">Somewhere With The Selkers</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className='ml-auto'>

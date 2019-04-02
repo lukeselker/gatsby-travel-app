@@ -5,6 +5,7 @@ import tahiti from '../images/tahiti/tahiti.jpg';
 import { graphql } from "gatsby";
 import Img from 'gatsby-image';
 import postStyle from './postStyles.css';
+import { FaClock } from 'react-icons/fa';
 import NewMap from '../components/newMap';
 
 const TahitiPost = (props) => (
@@ -31,20 +32,28 @@ const TahitiPost = (props) => (
     />
     <article className={'postWrapper'}>
 			<div className={"container"}>
-			<div className={"row mx-auto"} ><NewMap /></div>
+			{/* <div className={"row mx-auto"} >
+			<NewMap
+				zoomLevel={1}
+				planeScale={.2}
+				cityList={[
+					{name: 'San Francisco', latitude: 37.7749, longitude:-122.4194 },
+					{name: 'Papeete', latitude: 17.5516, longitude: 149.5585 },
+					]}
+			/></div> */}
 
 				<div className={"row"}>
 
 					<div className={"col-lg-8 col-md-10 col-xs-12 mx-auto"}>
-              <b/>
-						<div className={"embed-responsive embed-responsive-16by9 mx-auto"}>
+            <br/>
+						<div className={"embed-responsive embed-responsive-16by9 mx-auto"} style={{marginTop: '30px'}}>
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/UojvnPKz5p8" gesture="media" allowfullscreen></iframe>
 						</div>
 
 						<h2 className={"section-heading"}>Mo'orea</h2>
 
 						<p>
-						<i className={"fa fa-clock-o"} style={{color: 'gray'}} aria-hidden="true"></i><span style={{fontStyle: 'italic', color: 'gray'}}> 2 min read </span><br /><br />
+						<FaClock style={{color: 'gray'}}/><span style={{fontStyle: 'italic', color: 'gray'}}> 2 min read </span><br /><br />
 
 						The islands of French Polynesia are known for being one of the most romantic honeymoon destinations on earth. And for
 							good reason.</p>
