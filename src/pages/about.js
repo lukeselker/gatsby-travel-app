@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import about from '../images/about_us.jpg';
+import about from '../images/about.jpg';
 import SEO from "../components/seo"
 import postStyle from './postStyles.css';
 
