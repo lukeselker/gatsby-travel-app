@@ -144,7 +144,7 @@ export const pageQuery = graphql`
 		}
 	  }
 	}
-	canalClub: file(relativePath: { eq: "scottsdale/canal_club.jpg" }) {
+	canalClub: file(relativePath: { eq: "scottsdale/canalClub.jpg" }) {
 		childImageSharp {
 			fluid(maxWidth: 1000) {
 			...GatsbyImageSharpFluid
@@ -158,7 +158,7 @@ export const pageQuery = graphql`
 			}
 		  }
 		}
-	mcdowellSonoran: file(relativePath: { eq: "scottsdale/mcdowell_sonoran.jpg" }) {
+	mcdowellSonoran: file(relativePath: { eq: "scottsdale/mcdowellSonoran.jpg" }) {
 		childImageSharp {
 			fluid(maxWidth: 1000) {
 			...GatsbyImageSharpFluid
