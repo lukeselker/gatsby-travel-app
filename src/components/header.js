@@ -16,9 +16,9 @@ const Header = ({ siteTitle }) => (
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className='ml-auto'>
-      <Nav.Link className={headerStyles.navLink} href="#home">HOME</Nav.Link>
-      <Nav.Link className={headerStyles.navLink} href="#about">ABOUT</Nav.Link>
-      <Nav.Link className={headerStyles.navLink} href="#contact">CONTACT</Nav.Link>
+      <Nav.Link className={headerStyles.navLink} href='/'>HOME</Nav.Link>
+      <Nav.Link className={headerStyles.navLink} href="about">ABOUT</Nav.Link>
+      <Nav.Link className={headerStyles.navLink} href="contact">CONTACT</Nav.Link>
       <div className={headerStyles.navIconContainer}>
       <Nav.Link className={headerStyles.navIcon} href="https://www.instagram.com/SomewhereWithTheSelkers/"><FaInstagram /></Nav.Link>
       <Nav.Link className={headerStyles.navIcon} href="https://twitter.com/WithTheSelkers"><FaTwitter /></Nav.Link>
