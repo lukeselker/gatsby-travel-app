@@ -20,13 +20,13 @@ const IndexPage = (props) => (
               <CardDeck>
                 <PlaceCard
                   image={props.data.thailandCard.childImageSharp.fluid}
-                  postLink={'/'}
+                  postLink={'/thailand'}
                   postMonth={'October 2018'}
                   name={'Thailand'}
                 />
                 <PlaceCard
                   image={props.data.sanDiegoCard.childImageSharp.fluid}
-                  postLink={'/'}
+                  postLink={'/san_diego'}
                   postMonth={'August 2018'}
                   name={'San Diego'}
                 />
